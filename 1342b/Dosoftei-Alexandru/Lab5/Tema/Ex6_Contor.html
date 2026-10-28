@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex6 - Contor</title>
+    <script>
+        var aprins = false;
+        var numarAprinderi = 0;
+
+        function changeImage() {
+            var image = document.getElementById("bec");
+            aprins = !aprins;
+
+            if (aprins) {
+                image.src = "Bec aprins.gif";
+                numarAprinderi++;
+            } else {
+                image.src = "Bec stins.gif";
+            }
+
+            document.getElementById("contor").textContent =
+                "Becul a fost aprins de " + numarAprinderi + " ori.";
+        }
+    </script>
+</head>
+<body>
+    <h1>Contor pentru bec</h1>
+    <p>
+        <img id="bec" src="Bec stins.gif" alt="Bec stins" onclick="changeImage()">
+    </p>
+    <p id="contor">Becul a fost aprins de 0 ori.</p>
+</body>
+</html>
